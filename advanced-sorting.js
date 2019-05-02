@@ -4,3 +4,8 @@ var students = [
   { id: 3, name: "alex",     age: 22 },
   { id: 4, name: "alex",     age: 30 }
 ];
+
+students.sort((studentA, studentB) => (studentA.age < studentB.age));
+students.sort((studentA, studentB) => (studentA.name > studentB.name));
+
+console.log(students);
