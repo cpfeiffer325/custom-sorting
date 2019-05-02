@@ -5,7 +5,19 @@ var students = [
   { id: 4, name: "alex",     age: 30 }
 ];
 
-students.sort((studentA, studentB) => (studentA.age < studentB.age));
-students.sort((studentA, studentB) => (studentA.name > studentB.name));
+function customComparator(array) {
+  array.sort((studentA, studentB) => (studentA.age < studentB.age));
+  array.sort((studentA, studentB) => (studentA.name > studentB.name));
 
-console.log(students);
+  return array;
+}
+
+console.log(customComparator(students));
+
+// students.sort(function(A, B) {
+// ... return A.age - B.age;
+// ... })[0];
+
+// students.sort(function(A, B) {
+// ... return nameA.name - nameB.name;
+// ... });
